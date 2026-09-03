@@ -26,7 +26,7 @@ class Settings:
 
     #LLM
     EMBEDDING_MODEL: str = "gemini-embedding-001"
-    LLM_MODEL: str = "gemini-2.5-flash"
+    LLM_MODEL: str = "gemini-3.6-flash"
     LLM_TEMPERATURE: float = 0.0
 
     #Vector db

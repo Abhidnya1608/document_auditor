@@ -14,7 +14,7 @@ class DocumentAuditorEngine:
 
         base_llm = ChatGoogleGenerativeAI(
             model = settings.LLM_MODEL,
-            temperature = settings.LLM_TEMPERATURE,
+            # temperature = settings.LLM_TEMPERATURE,
             google_api_key = settings.GEMINI_API_KEY,
         )
         self.structured_llm = base_llm.with_structured_output(AuditFinding)
@@ -53,7 +53,7 @@ class DocumentAuditorEngine:
             self , document_name : str , rule_list : List[str]
     ) -> AuditReport:
         """Runs the audit engine accross a batch of compilance rules and returns a full report"""
-        findings = List[AuditFinding]
+        findings : List[AuditFinding] = []
 
         for rule in rule_list:
             finding = self.audit_single_rule(rule)
