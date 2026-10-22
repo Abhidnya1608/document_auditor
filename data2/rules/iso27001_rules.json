@@ -1,0 +1,9 @@
+{
+  "framework_name": "ISO 27001 Light Compliance Check",
+  "rules": [
+    "Password policy must require at least 12 characters including special characters.",
+    "Multi-factor authentication (MFA) must be enforced for remote system access.",
+    "Data backup procedures must be conducted and verified at least weekly.",
+    "Security incident response drills must be performed annually."
+  ]
+}

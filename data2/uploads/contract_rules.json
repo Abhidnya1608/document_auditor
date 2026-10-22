@@ -1,0 +1,9 @@
+{
+  "framework_name": "Standard Commercial Contract Audit",
+  "rules": [
+    "The agreement must specify a written termination notice period.",
+    "Payment terms must require settlement within 30 days of invoice receipt.",
+    "The agreement must contain an explicit confidentiality or non-disclosure clause.",
+    "Governing law and jurisdiction must be clearly designated."
+  ]
+}

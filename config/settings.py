@@ -10,7 +10,8 @@ load_dotenv(BASE_DIR / ".env")
 
 class Settings:
 
-    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY" , "")
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY" , "")
+    GEMINI_API_KEY : str = os.getenv("GEMINI_API_KEY" , "")
 
 
     #PRoject file paths
@@ -26,7 +27,7 @@ class Settings:
 
     #LLM
     EMBEDDING_MODEL: str = "gemini-embedding-001"
-    LLM_MODEL: str = "gemini-3.6-flash"
+    LLM_MODEL: str = "openai/gpt-oss-20b"
     LLM_TEMPERATURE: float = 0.0
 
     #Vector db
@@ -35,7 +36,7 @@ class Settings:
 
     def validate(self)-> None:
         """Verifies essential configurations"""
-        if not self.GEMINI_API_KEY:
+        if not self.GROQ_API_KEY:
             raise ValueError(
                 "API key missing"
             )
